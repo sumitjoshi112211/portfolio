@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.projects {
+  min-height: 100vh;
+  background-color: #0d1117;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 88px 20px 40px;
+  position: relative;
+}
+
+.projects::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(13, 17, 23, 0.95) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(13, 17, 23, 0.95) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: center center;
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+.projects-container {
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.projects-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.projects-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #9CA3AF;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.project-card {
+  background: linear-gradient(145deg, rgba(22, 27, 34, 0.8), rgba(13, 17, 23, 0.9));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.project-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.1);
+}
+
+.project-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, #5EEAD4, #2DD4BF);
+  color: #0d1117;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.project-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.5px;
+}
+
+.project-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #9CA3AF;
+  margin: 0 0 16px 0;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tech-tag {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #E5E7EB;
+  background: rgba(94, 234, 212, 0.1);
+  border: 1px solid rgba(94, 234, 212, 0.2);
+  border-radius: 16px;
+  padding: 6px 12px;
+  transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+  background: rgba(94, 234, 212, 0.2);
+  border-color: rgba(94, 234, 212, 0.3);
+}
+
+.project-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.project-btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.project-btn-primary {
+  background: linear-gradient(135deg, #5EEAD4, #2DD4BF);
+  color: #0d1117;
+}
+
+.project-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(94, 234, 212, 0.3);
+}
+
+.project-btn-secondary {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.project-btn-secondary:hover:not(.disabled) {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.project-btn-secondary.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.show-more-btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 40px;
+  background: linear-gradient(135deg, #5EEAD4, #2DD4BF);
+  color: #0d1117;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 40px auto 0;
+}
+
+.show-more-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(94, 234, 212, 0.3);
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .projects-title {
+    font-size: 42px;
+  }
+
+  .projects-subtitle {
+    font-size: 17px;
+  }
+
+  .project-image-wrapper {
+    height: 180px;
+  }
+
+  .project-content {
+    padding: 20px;
+  }
+
+  .project-title {
+    font-size: 20px;
+  }
+
+  .project-description {
+    font-size: 14px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .projects {
+    padding: 70px 20px 40px;
+  }
+
+  .projects-header {
+    margin-bottom: 40px;
+  }
+
+  .projects-title {
+    font-size: 36px;
+  }
+
+  .projects-subtitle {
+    font-size: 16px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .project-image-wrapper {
+    height: 200px;
+  }
+
+  .project-content {
+    padding: 20px;
+  }
+
+  .project-title {
+    font-size: 18px;
+  }
+
+  .project-description {
+    font-size: 14px;
+  }
+
+  .project-buttons {
+    flex-direction: column;
+  }
+
+  .show-more-btn {
+    padding: 12px 32px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-title {
+    font-size: 32px;
+  }
+
+  .projects-subtitle {
+    font-size: 15px;
+  }
+
+  .project-image-wrapper {
+    height: 180px;
+  }
+
+  .project-content {
+    padding: 18px;
+  }
+
+  .project-title {
+    font-size: 17px;
+  }
+
+  .project-description {
+    font-size: 13px;
+  }
+
+  .tech-tag {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .project-btn {
+    font-size: 13px;
+    padding: 10px 16px;
+  }
+}

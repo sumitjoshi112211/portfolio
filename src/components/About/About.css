@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.about {
+  min-height: 100vh;
+  background-color: #0d1117;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 88px 20px 40px;
+  position: relative;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(13, 17, 23, 0.95) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(13, 17, 23, 0.95) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: center center;
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+.about-container {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+
+.about-left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.about-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #9CA3AF;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.about-description {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-description p {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #D1D5DB;
+  margin: 0;
+  line-height: 1.8;
+}
+
+.about-interests {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.about-interests li {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #9CA3AF;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.about-interests li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #5EEAD4;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.about-right {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.about-card {
+  background: linear-gradient(145deg, rgba(22, 27, 34, 0.8), rgba(13, 17, 23, 0.9));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  max-width: 400px;
+}
+
+.card-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 24px 0;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  letter-spacing: -0.5px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.card-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.card-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6B7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-value {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #E5E7EB;
+  word-break: break-word;
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .about-container {
+    gap: 60px;
+  }
+
+  .about-title {
+    font-size: 42px;
+  }
+
+  .about-subtitle {
+    font-size: 17px;
+  }
+
+  .about-description p {
+    font-size: 15px;
+  }
+
+  .about-card {
+    padding: 28px;
+    max-width: 350px;
+  }
+
+  .card-title {
+    font-size: 22px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .about {
+    padding: 70px 20px 40px;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .about-left {
+    order: 2;
+  }
+
+  .about-right {
+    order: 1;
+    justify-content: center;
+  }
+
+  .about-title {
+    font-size: 36px;
+  }
+
+  .about-subtitle {
+    font-size: 16px;
+  }
+
+  .about-description p {
+    font-size: 15px;
+  }
+
+  .about-interests li {
+    font-size: 15px;
+  }
+
+  .about-card {
+    max-width: 100%;
+    padding: 24px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .card-content {
+    gap: 16px;
+  }
+
+  .card-item {
+    padding: 10px;
+  }
+
+  .card-label {
+    font-size: 12px;
+  }
+
+  .card-value {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 32px;
+  }
+
+  .about-subtitle {
+    font-size: 15px;
+  }
+
+  .about-description p {
+    font-size: 14px;
+  }
+
+  .about-card {
+    padding: 20px;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+}
