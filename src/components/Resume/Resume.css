@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.resume {
+  min-height: 100vh;
+  background-color: #0d1117;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 88px 20px 40px;
+  position: relative;
+}
+
+.resume::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(13, 17, 23, 0.95) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(13, 17, 23, 0.95) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: center center;
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+.resume-container {
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.resume-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.resume-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.resume-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #8b949e;
+  margin: 0;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.resume-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resume-card {
+  background: rgba(22, 27, 34, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(48, 54, 61, 0.8);
+  border-radius: 16px;
+  padding: 60px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.resume-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.resume-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  color: #ffffff;
+}
+
+.resume-icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+.resume-info {
+  text-align: center;
+}
+
+.resume-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.5px;
+}
+
+.resume-role {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #8b949e;
+  margin: 0 0 12px 0;
+}
+
+.resume-type {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #667eea;
+  background: rgba(102, 126, 234, 0.1);
+  padding: 6px 16px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.4);
+}
+
+.download-btn:hover {
+  box-shadow: 0 6px 24px rgba(102, 126, 234, 0.6);
+}
+
+.download-icon {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  .resume-title {
+    font-size: 36px;
+  }
+
+  .resume-subtitle {
+    font-size: 16px;
+  }
+
+  .resume-card {
+    padding: 40px 24px;
+  }
+
+  .resume-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .resume-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .resume-name {
+    font-size: 20px;
+  }
+
+  .download-btn {
+    font-size: 14px;
+    padding: 14px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume {
+    padding: 88px 16px 40px;
+  }
+
+  .resume-title {
+    font-size: 28px;
+  }
+
+  .resume-subtitle {
+    font-size: 14px;
+  }
+
+  .resume-card {
+    padding: 32px 20px;
+  }
+}

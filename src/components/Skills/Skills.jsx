@@ -6,7 +6,7 @@ const Skills = () => {
   const skillsData = [
     {
       title: 'Programming Languages',
-      skills: ['Java', 'JavaScript', 'C', 'C++'],
+      skills: ['Java', 'JavaScript'],
       icon: '💻'
     },
     {
@@ -31,7 +31,7 @@ const Skills = () => {
     },
     {
       title: 'Core CS Fundamentals',
-      skills: ['Data Structures & Algorithms', 'Object-Oriented Programming (OOP)', 'DBMS', 'Operating Systems', 'Computer Networks'],
+      skills: ['Data Structures & Algorithms', 'Object-Oriented Programming (OOP)', 'Operating Systems'],
       icon: '📚'
     },
     {
