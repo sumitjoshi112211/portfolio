@@ -19,7 +19,7 @@ const Projects = () => {
       description: 'An AI-powered educational platform developed during my internship that helps students learn through an intelligent chatbot, curated courses, quizzes, and personalized learning resources. The platform provides an interactive dashboard, responsive user interface, and modern user experience.',
       technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Gemini API', 'REST API', 'Firebase Authentication', 'JavaScript', 'HTML5', 'CSS3'],
       liveDemo: '#',
-      github: '#',
+      github: null,
       image: aiImage,
       badge: 'Featured'
     },
@@ -27,8 +27,8 @@ const Projects = () => {
       title: 'Personal Portfolio Website',
       description: 'A modern, fully responsive developer portfolio built with React.js. It showcases my skills, projects, certifications, and contact information with smooth scrolling, responsive layouts, beautiful UI animations, reusable React components, and an optimized user experience. Designed to impress recruiters and highlight my frontend development skills.',
       technologies: ['React.js', 'JavaScript', 'HTML5', 'CSS3', 'Responsive Design', 'Framer Motion', 'React Icons', 'Vite'],
-      liveDemo: '#',
-      github: '#',
+      liveDemo: 'https://portfolio-one-neon-42.vercel.app/',
+      github: 'https://github.com/sumitjoshi112211/portfolio',
       image: portImage,
       badge: 'Featured'
     },
@@ -37,7 +37,7 @@ const Projects = () => {
       description: 'Chronos is a modern AI-powered healthcare assistant built to help users monitor their health and receive intelligent recommendations. Users can track blood pressure, heart rate, blood sugar, and other health metrics while Gemini AI analyzes symptoms and provides personalized health suggestions, medicine guidance, and recommendations on when professional medical consultation is needed. The platform also includes real-time medicine reminders, alarm and timer functionality, multiple dashboards, and an intuitive responsive interface for a seamless healthcare experience.',
       technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Gemini API', 'JWT Authentication', 'REST API', 'Responsive UI'],
       liveDemo: '#',
-      github: '#',
+      github: 'https://github.com/sumitjoshi112211/chronos-project',
       image: chronosImage,
       badge: 'Featured'
     },
@@ -46,7 +46,7 @@ const Projects = () => {
       description: 'A modern movie browsing web application with a responsive interface and clean user experience.',
       technologies: ['React.js', 'JavaScript', 'CSS'],
       liveDemo: 'https://quick-show12.vercel.app/',
-      github: null,
+      github: 'https://github.com/sumitjoshi112211/Quick-Show12',
       image: quickshowImage,
       badge: null
     },
@@ -55,7 +55,7 @@ const Projects = () => {
       description: 'Developed during my Full Stack Development Internship. An educational platform providing learning resources with a responsive and modern UI.',
       technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB'],
       liveDemo: 'https://edtech-self.vercel.app/',
-      github: null,
+      github: 'https://github.com/sumitjoshi112211/edtech',
       image: internshipImage,
       badge: 'Internship Project'
     },
@@ -64,7 +64,7 @@ const Projects = () => {
       description: 'A modern golf club website featuring smooth scrolling, interactive animations, responsive design, and engaging UI.',
       technologies: ['HTML', 'CSS', 'JavaScript', 'GSAP'],
       liveDemo: 'https://familygolfbasic.vercel.app/',
-      github: null,
+      github: 'https://github.com/sumitjoshi112211/familygolfbasic',
       image: golfImage,
       badge: null
     },
@@ -73,7 +73,7 @@ const Projects = () => {
       description: 'A responsive grocery shopping website with modern product browsing experience and attractive UI.',
       technologies: ['React.js', 'JavaScript', 'CSS'],
       liveDemo: 'https://grocify-jet.vercel.app/',
-      github: null,
+      github: 'https://github.com/sumitjoshi112211/Shopify---Clone',
       image: grocifyImage,
       badge: null
     },
@@ -82,7 +82,7 @@ const Projects = () => {
       description: 'A career guidance website helping students explore career opportunities through an attractive interface.',
       technologies: ['React.js', 'JavaScript', 'CSS'],
       liveDemo: 'https://spark-career-ui.vercel.app/',
-      github: null,
+      github: 'https://github.com/sumitjoshi112211/spark-career-ui',
       image: sparkImage,
       badge: null
     }
@@ -162,15 +162,17 @@ const Projects = () => {
                   ))}
                 </div>
                 <div className="project-buttons">
-                  <a
-                    href={project.liveDemo}
-                    target={project.liveDemo !== '#' ? '_blank' : undefined}
-                    rel={project.liveDemo !== '#' ? 'noopener noreferrer' : undefined}
-                    className="project-btn project-btn-primary"
-                    onClick={(e) => project.liveDemo === '#' && e.preventDefault()}
-                  >
-                    Live Demo
-                  </a>
+                  {project.title !== 'AI Smart Assistant for Education' && project.title !== 'Chronos – AI Health Assistant' && (
+                    <a
+                      href={project.liveDemo}
+                      target={project.liveDemo !== '#' ? '_blank' : undefined}
+                      rel={project.liveDemo !== '#' ? 'noopener noreferrer' : undefined}
+                      className="project-btn project-btn-primary"
+                      onClick={(e) => project.liveDemo === '#' && e.preventDefault()}
+                    >
+                      Live Demo
+                    </a>
+                  )}
                   <button
                     className={`project-btn project-btn-secondary ${!project.github || project.github === '#' ? 'disabled' : ''}`}
                     disabled={!project.github || project.github === '#'}
@@ -221,15 +223,17 @@ const Projects = () => {
                       ))}
                     </div>
                     <div className="project-buttons">
-                      <a
-                        href={project.liveDemo}
-                        target={project.liveDemo !== '#' ? '_blank' : undefined}
-                        rel={project.liveDemo !== '#' ? 'noopener noreferrer' : undefined}
-                        className="project-btn project-btn-primary"
-                        onClick={(e) => project.liveDemo === '#' && e.preventDefault()}
-                      >
-                        Live Demo
-                      </a>
+                      {project.title !== 'AI Smart Assistant for Education' && project.title !== 'Chronos – AI Health Assistant' && (
+                        <a
+                          href={project.liveDemo}
+                          target={project.liveDemo !== '#' ? '_blank' : undefined}
+                          rel={project.liveDemo !== '#' ? 'noopener noreferrer' : undefined}
+                          className="project-btn project-btn-primary"
+                          onClick={(e) => project.liveDemo === '#' && e.preventDefault()}
+                        >
+                          Live Demo
+                        </a>
+                      )}
                       <button
                         className={`project-btn project-btn-secondary ${!project.github || project.github === '#' ? 'disabled' : ''}`}
                         disabled={!project.github || project.github === '#'}

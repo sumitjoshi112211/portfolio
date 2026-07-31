@@ -76,7 +76,7 @@ const Contact = () => {
 
     try {
       await emailjs.send(
-        'service_h6wkgz9',
+        'service_08amkah',
         'template_8gy4u2l',
         templateParams,
         'm3td2R3kIKfC3BmYD'
@@ -92,7 +92,9 @@ const Contact = () => {
       
       setTimeout(() => setShowSuccess(false), 5000);
     } catch (error) {
-      console.error('EmailJS Error:', error);
+      console.error("EmailJS Error:", error);
+      console.error("Status:", error.status);
+      console.error("Text:", error.text);
       setShowError(true);
       setTimeout(() => setShowError(false), 5000);
     } finally {
